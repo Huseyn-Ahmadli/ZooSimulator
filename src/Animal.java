@@ -11,16 +11,16 @@ public abstract class Animal {
     private Enclosure enclosure;
     private String name;
 
-    public Animal(int yas, char cins, Food[] canEatThis, int can, int omur){
+    public Animal(int animalAge, char animalGender, Food[] canEatThis, int animalHealth, int animalLifeExpectancy){
         Random rndm = new Random();
-        this.age = yas;
+        this.age = animalAge;
         this.name = NameList.animalNamesList.get(rndm.nextInt(NameList.animalNamesList.size()));
-        this.gender = cins;
+        this.gender = animalGender;
 
         this.eats = canEatThis;
 
-        setHealth(can);
-        this.lifeExpectancy = omur;
+        setHealth(animalHealth);
+        this.lifeExpectancy = animalLifeExpectancy;
     }
 
     public String getName() {
